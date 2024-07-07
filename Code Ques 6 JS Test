@@ -1,0 +1,24 @@
+Consider this array :
+ const people = [
+ { id: 1, name: 'John', age: 30 },
+ { id: 2, name: 'Jane', age: 25 },
+ { id: 3, name: 'Bob', age: 40 },
+ ]; (apply all operations on this array)
+ only use map and filter functions to get the output array.
+ A) Output array : ['John', 'Jane', 'Bob']
+ B) Output array :
+ [{ "id":1,"name":"John","age":30,"salary":50000},
+ {"id": 2,"name": "Jane","age": 25,"salary": 50000},
+ {"id": 3,"name": "Bob","age": 40,"salary": 50000}]
+ C)Create an array of objects for people who are above 30
+ years old, and you only need their names and ages (no
+ id property ). You can use map in combination with filter
+ Output array : [
+ {"name": "Bob","age": 40}
+ ]
+Solution
+A) const namesArray = people.map(person => person.name);
+B) const salaryArray = people.map(person => ({ ...person, salary: 50000 }))
+C) const above30Array = people
+  .filter(person => person.age > 30)
+  .map(person => ({ name: person.name, age: person.age }));

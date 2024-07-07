@@ -1,0 +1,20 @@
+Q7.  write a function main and pass two functions as
+ parameter to it cb1 and cb2. main(cb1, cb2, x, y)
+ Define cb1 in such a way that will add two numbers
+ Define cb2 in such a way that will give you the
+ difference of two numbers.
+ X and y are two numbers ex- x=11, y =4
+SOLUTION
+ANS:: function main(cb1, cb2, x, y) {
+  console.log("Input numbers:", x, y);
+  console.log("Result of cb1 (addition):", cb1(x, y));
+  console.log("Result of cb2 (subtraction):", cb2(x, y));
+}
+// Callback function for addition
+function cb1(a, b) {
+  return a + b;
+}
+// Callback function for subtraction
+function cb2(a, b) {
+  return a - b;
+}
